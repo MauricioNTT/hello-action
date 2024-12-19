@@ -16,5 +16,5 @@ runs:
       run: echo "result=Hello World" >> $GITHUB_OUTPUT
       shell: bash
     
-    - run: echo "Output: ${{ steps.output-step.outputs.result }}"
+    - run: echo "${{ steps.output-step.outputs.result }}"
       shell: bash
