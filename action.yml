@@ -15,6 +15,6 @@ runs:
     - run: echo ${{inputs.message}}
       shell: bash
 
-    - run: echo "deu boa!" >> GITHUB_OUTPUT
+    - run: echo "result=deu boa!" >> GITHUB_OUTPUT
       shell: bash
   
