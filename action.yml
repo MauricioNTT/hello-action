@@ -5,11 +5,16 @@ inputs:
     description: 'The message to print'
     required: true
     default: 'Hello, Github Actions!'
+outputs:
+  result:
+    description: 'The result of the action'
+    
 runs:
   using: composite
   steps:
-  
     - run: echo ${{inputs.message}}
       shell: bash
-  
+
+    - run: echo "deu boa!" >> GITHUB_OUTPUT
+      shell: bash
   
