@@ -1,0 +1,15 @@
+name: 'Python Hello World Action'
+description: 'A simple action to print "Hello, World!" using Python'
+inputs:
+  message:
+    description: 'The message to print'
+    required: true
+    default: 'Hello, Github Actions!'
+runs:
+  using: composite
+  steps:
+  
+    - run: echo ${{inputs.message}}
+      shell: bash
+  
+  
