@@ -5,10 +5,6 @@ inputs:
     description: 'The message to print'
     required: true
     default: 'Hello, Github Actions!'
-outputs:
-  result:
-    value: ${{ steps.output-step.outputs.result }}
-    description: 'The result of the action'
     
 runs:
   using: composite
@@ -17,6 +13,8 @@ runs:
       shell: bash
 
     - id: output-step
-      run: echo "result=deu boa!" >> GITHUB_ENV
+      run: echo "result=deu boa!" >> GITHUB_OUTPUT
       shell: bash
-  
+    
+    - run: echo "${{ steps.output-steps.outputs.result }}"
+      shell: bash
