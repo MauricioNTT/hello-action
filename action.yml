@@ -20,3 +20,4 @@ runs:
       shell: bash
 
     - run: echo "result=${{ steps.output-step.outputs.result }}" >> $GITHUB_ENV
+      shell: bash
