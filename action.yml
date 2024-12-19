@@ -13,8 +13,8 @@ runs:
       shell: bash
 
     - id: output-step
-      run: echo "result=deu boa!" >> GITHUB_OUTPUT
+      run: echo "result=Teste!" >> $GITHUB_OUTPUT
       shell: bash
     
-    - run: echo "${{ steps.output-steps.outputs.result }}"
+    - run: echo "Output: ${{ steps.output-step.outputs.result }}"
       shell: bash
