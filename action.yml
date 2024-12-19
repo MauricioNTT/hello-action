@@ -7,6 +7,7 @@ inputs:
     default: 'Hello, Github Actions!'
 outputs:
   result:
+    value: ${{ steps.output-step.outputs.result }}
     description: 'The result of the action'
     
 runs:
@@ -15,6 +16,7 @@ runs:
     - run: echo ${{inputs.message}}
       shell: bash
 
-    - run: echo "result=deu boa!" >> GITHUB_OUTPUT
+    - id: output-step
+      run: echo "result=deu boa!" >> GITHUB_OUTPUT
       shell: bash
   
